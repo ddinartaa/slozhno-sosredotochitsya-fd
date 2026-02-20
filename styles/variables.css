@@ -10,7 +10,8 @@
   --font-size-main: 18px;
   --label-color: #DB00FF;
   --accent-color: #FF0070;
-  --dark-title-color: #000028;
+  --text-color-on-accent: #000028;
+  --text-color-main: #F1B2CE;
   --page-bg-color: #000028;
   --cover-image: url('../images/cover-image-dark.png');
   --page-gutter: 10px;
