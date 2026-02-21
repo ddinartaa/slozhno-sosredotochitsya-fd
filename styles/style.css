@@ -64,7 +64,6 @@
 
 .header__theme-menu-button:hover {
   border: 1px solid transparent;
-  border-color: var(--menu-button-color); 
   border-color: color-mix(in srgb, currentColor, transparent 40%);
 }
 
@@ -263,7 +262,7 @@
 
   .gallery__list-item:nth-of-type(5) {
     grid-column: span 2;
-  }  
+  }
 }
 
 @media (width >= 1024px) {
