@@ -287,7 +287,8 @@
   }
 
   .factors .section__cards-list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .factors .section__title {
