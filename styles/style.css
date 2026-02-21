@@ -160,3 +160,18 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  min-height: 667px;
+}
+
+.header__focus-label {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
