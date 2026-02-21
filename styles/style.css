@@ -57,11 +57,11 @@
   background-color: transparent;
   border: none;
   text-transform: lowercase;
+  padding: 1px 13px;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
-  padding: 1px 13px;
 }
 
 .label {
@@ -231,4 +231,33 @@
   .gallery__list-item:nth-of-type(5) {
     grid-column: span 2;
   }  
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    justify-self: center;
+  }
+
+  .header__theme-menu-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .reasons,
+  .focus-tips {
+    grid-template-columns: 315px auto;
+  }
+
+  .factors .section__cards-list {
+    flex-direction: row;
+  }
+
+  .factors .section__title {
+    width: 315px;
+  }
 }
