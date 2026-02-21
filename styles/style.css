@@ -23,6 +23,7 @@
 
 .header__decorative-element {
   position: absolute;
+  display: var(--decorative-display);
   color: var(--accent-color);
   top: var(--page-gutter);
   right: calc(var(--page-gutter) + 10px);
@@ -50,18 +51,34 @@
 .header__theme-menu-item {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color);
+  color: var(--menu-button-color);
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   text-transform: lowercase;
   padding: 1px 13px;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid transparent;
+  border-color: var(--menu-button-color); 
+  border-color: color-mix(in srgb, currentColor, transparent 40%);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
+}
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  pointer-events: none;
+  border: 1px solid currentColor;
 }
 
 .label {
@@ -76,6 +93,10 @@
 
 .header__title {
   font-weight: var(--fw-bold);
+}
+
+.header__title span {
+  display: block;
 }
 
 .title-decor {
@@ -94,8 +115,8 @@
 .decorated-zone::before {
   top: var(--page-gutter);
   right: var(--page-gutter);
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--decorated-border-color);
+  border-right: 1px solid var(--decorated-border-color);
 }
 
 .decorated-zone::after {
@@ -121,7 +142,7 @@
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
 }
 
 .section__cards-title {
@@ -140,6 +161,18 @@
 
 .card__text-link {
   text-shadow: 2px 2px var(--accent-color);
+}
+
+.card__text-link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.card__text-link:focus {
+  outline: none;
+}
+
+.card__text-link:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 .card__title_thin {
@@ -260,4 +293,11 @@
   .factors .section__title {
     width: 315px;
   }
+}
+
+/* LIGHT THEME */
+
+.theme-light .decorated-zone::before,
+.theme-light .decorated-zone::after {
+  border-color: var(--text-color-main);
 }
